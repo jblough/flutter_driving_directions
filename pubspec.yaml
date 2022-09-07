@@ -1,11 +1,10 @@
 name: flutter_driving_directions
 description: A Flutter plugin to launch native driving directions.
 version: 0.0.1
-author: Joe Blough <joe.blough@gmail.com>
 homepage: https://github.com/jblough/flutter_driving_directions
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
   flutter: ">=2.5.0"
 
 dependencies:
