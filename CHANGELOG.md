@@ -1,4 +1,4 @@
-## 1,9,9
+## 1.0.0
 * null-safe
 * Android V2 embedding
 
