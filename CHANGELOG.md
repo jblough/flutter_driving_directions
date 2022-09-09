@@ -1,3 +1,7 @@
+## 1.0.0
+* null-safe
+* Android V2 embedding
+
 ## 0.0.1
 
-* Initial release
+* TODO: Describe initial release.

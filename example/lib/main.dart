@@ -1,14 +1,16 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_driving_directions/flutter_driving_directions.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -23,9 +25,7 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       await FlutterDrivingDirections.launchDirections(
-          latitude: 42.319935,
-          longitude: -84.020364,
-          address: '320 Main Street');
+          latitude: 42.319935, longitude: -84.020364, address: '320 Main Street');
     } on PlatformException {
       debugPrint('Failed to launch directions.');
     }
@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
+        body: const Center(
           child: Text('Launching navigation\n'),
         ),
       ),
