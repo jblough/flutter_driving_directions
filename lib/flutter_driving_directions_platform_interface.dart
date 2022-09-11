@@ -8,13 +8,14 @@ abstract class FlutterDrivingDirectionsPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static FlutterDrivingDirectionsPlatform _instance = MethodChannelFlutterDrivingDirections();
+  static FlutterDrivingDirectionsPlatform _instance =
+      MethodChannelFlutterDrivingDirections();
 
   /// The default instance of [FlutterDrivingDirectionsPlatform] to use.
   ///
   /// Defaults to [MethodChannelFlutterDrivingDirections].
   static FlutterDrivingDirectionsPlatform get instance => _instance;
-  
+
   /// Platform-specific implementations should set this with their own
   /// platform-specific class that extends [FlutterDrivingDirectionsPlatform] when
   /// they register themselves.
