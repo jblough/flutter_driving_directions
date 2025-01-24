@@ -1,3 +1,6 @@
+## 2.0.0
+* Updated to JDK17
+
 ## 1.0.1
 * Run through Flutter formatter
 
