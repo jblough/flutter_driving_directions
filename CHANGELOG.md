@@ -1,3 +1,10 @@
+## 3.0.0
+* Updated to Flutter 3.24.0
+* Switched from CocoaPods to Swift Package Manager
+* Incremented minimum iOS version to 13.0
+* Incremented minimum Android version to 21
+* Upgraded to Android Gradle Plugin (AGP) 8.7.0 
+
 ## 2.0.0
 * Updated to JDK17
 
