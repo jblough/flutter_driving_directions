@@ -1,3 +1,6 @@
+## 3.0.1
+* Migrated Android build system to Kotlin Gradle files
+
 ## 3.0.0
 * Updated to Flutter 3.24.0
 * Switched from CocoaPods to Swift Package Manager
