@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_driving_directions/flutter_driving_directions.dart';
 
 void main() => runApp(const MyApp());
@@ -15,36 +14,27 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  void initState() {
-    super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      await FlutterDrivingDirections.launchDirections(
-        latitude: 40.689247,
-        longitude: -74.044502,
-        label: 'Status of Liberty',
-      );
-    } on PlatformException {
-      debugPrint('Failed to launch directions.');
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Flutter Driving Directions'),
         ),
-        body: const Center(
-          child: Text('Launching navigation\n'),
+        body: Center(
+          child: FilledButton(
+              onPressed: () => _launchNavigation(),
+              child: const Text('Launch navigation'),
+          ),
         ),
       ),
+    );
+  }
+
+  Future<void> _launchNavigation() async {
+    await FlutterDrivingDirections.launchDirections(
+      latitude: 40.689247,
+      longitude: -74.044502,
+      label: 'Statue of Liberty',
     );
   }
 }
