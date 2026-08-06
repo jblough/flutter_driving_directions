@@ -14,14 +14,14 @@ class MethodChannelFlutterDrivingDirections
   Future<void> launchDirections({
     required double latitude,
     required double longitude,
-    required String address,
+    required String label,
   }) async {
     return await methodChannel.invokeMethod(
       'launchDirections',
       <String, Object>{
         'latitude': latitude,
         'longitude': longitude,
-        'address': address,
+        'label': label,
       },
     );
   }

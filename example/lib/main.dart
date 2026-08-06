@@ -25,9 +25,9 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       await FlutterDrivingDirections.launchDirections(
-        latitude: 42.319935,
-        longitude: -84.020364,
-        address: '320 Main Street',
+        latitude: 40.689247,
+        longitude: -74.044502,
+        label: 'Status of Liberty',
       );
     } on PlatformException {
       debugPrint('Failed to launch directions.');

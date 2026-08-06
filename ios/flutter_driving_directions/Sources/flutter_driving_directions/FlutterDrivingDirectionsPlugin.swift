@@ -13,12 +13,12 @@ public class FlutterDrivingDirectionsPlugin: NSObject, FlutterPlugin {
     let arguments = call.arguments as! Dictionary<String, Any>
     let latitude = arguments["latitude"] as! Double
     let longitude = arguments["longitude"] as! Double
-    let address = arguments["address"] as! String
+    let label = arguments["label"] as! String
 
     let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     let placemark = MKPlacemark(coordinate: coordinate)
     let mapItem = MKMapItem(placemark: placemark)
-    mapItem.name = address
+    mapItem.name = label
     mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
   }
 }

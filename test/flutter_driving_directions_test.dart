@@ -10,18 +10,18 @@ class MockFlutterDrivingDirectionsPlatform
   bool launchDirectionsCalled = false;
   double? lastLatitude;
   double? lastLongitude;
-  String? lastAddress;
+  String? lastLabel;
 
   @override
   Future<void> launchDirections({
     required double latitude,
     required double longitude,
-    required String address,
+    required String label,
   }) async {
     launchDirectionsCalled = true;
     lastLatitude = latitude;
     lastLongitude = longitude;
-    lastAddress = address;
+    lastLabel = label;
   }
 }
 
@@ -41,12 +41,12 @@ void main() {
     await FlutterDrivingDirections.launchDirections(
       latitude: 42.0,
       longitude: -84.0,
-      address: 'Test Address',
+      label: '123 Main Street',
     );
 
     expect(mockPlatform.launchDirectionsCalled, isTrue);
     expect(mockPlatform.lastLatitude, 42.0);
     expect(mockPlatform.lastLongitude, -84.0);
-    expect(mockPlatform.lastAddress, 'Test Address');
+    expect(mockPlatform.lastLabel, '123 Main Street');
   });
 }

@@ -29,7 +29,7 @@ void main() {
     await platform.launchDirections(
       latitude: 42.0,
       longitude: -84.0,
-      address: 'Test Address',
+      label: '123 Main Street',
     );
 
     expect(
@@ -40,7 +40,7 @@ void main() {
           arguments: <String, Object>{
             'latitude': 42.0,
             'longitude': -84.0,
-            'address': 'Test Address',
+            'label': '123 Main Street',
           },
         ),
       ],

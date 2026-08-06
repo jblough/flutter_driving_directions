@@ -4,12 +4,12 @@ class FlutterDrivingDirections {
   static Future<void> launchDirections({
     required double latitude,
     required double longitude,
-    required String address,
+    required String label,
   }) {
     return FlutterDrivingDirectionsPlatform.instance.launchDirections(
       latitude: latitude,
       longitude: longitude,
-      address: address,
+      label: label,
     );
   }
 }

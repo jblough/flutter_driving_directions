@@ -1,3 +1,7 @@
+## 3.0.2
+* Updated README documentation
+* Changed "address" parameter to "label" for a better description of its function
+
 ## 3.0.1
 * Migrated Android build system to Kotlin Gradle files
 

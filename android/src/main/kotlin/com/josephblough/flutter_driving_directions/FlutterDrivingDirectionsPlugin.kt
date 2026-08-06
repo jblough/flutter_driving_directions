@@ -52,9 +52,9 @@ class FlutterDrivingDirectionsPlugin: FlutterPlugin, MethodCallHandler, Activity
 
     val latitude = call.argument<Double>("latitude")
     val longitude = call.argument<Double>("longitude")
-    val address = call.argument<String>("address")
+    val label = call.argument<String>("label")
 
-    val uri = "http://maps.google.com/maps?daddr=$latitude,$longitude ($address)"
+    val uri = "http://maps.google.com/maps?daddr=$latitude,$longitude ($label)"
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
     intent.setPackage("com.google.android.apps.maps")
     activity?.startActivity(intent)

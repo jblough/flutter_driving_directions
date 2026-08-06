@@ -1,15 +1,46 @@
 # flutter_driving_directions
 
-A Flutter plugin to launch native driving directions.
+A Flutter plugin to launch native driving directions on Android and iOS.
 
-## Getting Started
+On Android, it opens **Google Maps** via Intent. On iOS, it opens **Apple Maps** using native MapKit.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation:
 
+In your pubspec.yaml
+```
+dependencies:
+  flutter_driving_directions: ^3.0.2
+```
+
+## Sample Usage
+
+Import the package:
+
+```dart
+import 'package:flutter_driving_directions/flutter_driving_directions.dart';
+```
+
+Launch directions to a specific coordinate and label/address:
+
+```dart
+await FlutterDrivingDirections.launchDirections(
+  latitude: 40.689247,
+  longitude: -74.044502,
+  label: 'Statue of Liberty',
+);
+```
+
+## Platform Setup
+
+### Android
+Add the following to your `AndroidManifest.xml` to support package visibility on Android 11+:
+
+```xml
+<queries>
+    <package android:name="com.google.android.apps.maps" />
+</queries>
+```
+
+### iOS
+No additional setup is required.

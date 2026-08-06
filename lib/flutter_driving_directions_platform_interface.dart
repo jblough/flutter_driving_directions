@@ -27,7 +27,7 @@ abstract class FlutterDrivingDirectionsPlatform extends PlatformInterface {
   Future<void> launchDirections({
     required double latitude,
     required double longitude,
-    required String address,
+    required String label,
   }) {
     throw UnimplementedError('launchDirections() has not been implemented.');
   }
